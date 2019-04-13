@@ -1,0 +1,5 @@
+WEIGHT
+  BY freq .
+NPAR TEST
+  /BINOMIAL (0.17)= group
+  /MISSING ANALYSIS.

@@ -1,0 +1,6 @@
+ACF
+  VARIABLES= ·¢²¡ÂÊ
+  /NOLOG
+  /MXAUTO 16
+  /SERROR=IND
+  /PACF.

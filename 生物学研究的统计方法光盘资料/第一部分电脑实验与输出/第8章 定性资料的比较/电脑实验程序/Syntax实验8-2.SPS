@@ -1,0 +1,5 @@
+WEIGHT
+  BY freq .
+NPAR TEST
+  /MCNEMAR= row  WITH colume (PAIRED)
+  /MISSING ANALYSIS.

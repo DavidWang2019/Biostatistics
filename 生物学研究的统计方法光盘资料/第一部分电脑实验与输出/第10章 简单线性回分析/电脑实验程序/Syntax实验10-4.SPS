@@ -1,0 +1,75 @@
+USE ALL.
+COMPUTE filter_$=(GROUP = 1).
+VARIABLE LABEL filter_$ 'GROUP = 1 (FILTER)'.
+VALUE LABELS filter_$  0 'Not Selected' 1 'Selected'.
+FORMAT filter_$ (f1.0).
+FILTER BY filter_$.
+EXECUTE .
+* Curve Estimation.
+TSET NEWVAR=NONE .
+CURVEFIT /VARIABLES=Y1  WITH X1
+  /CONSTANT
+  /MODEL=LINEAR
+  /PLOT FIT.
+
+USE ALL.
+COMPUTE filter_$=(GROUP = 2).
+VARIABLE LABEL filter_$ 'GROUP = 2 (FILTER)'.
+VALUE LABELS filter_$  0 'Not Selected' 1 'Selected'.
+FORMAT filter_$ (f1.0).
+FILTER BY filter_$.
+EXECUTE .
+* Curve Estimation.
+TSET NEWVAR=NONE .
+CURVEFIT /VARIABLES=Y1  WITH X1
+  /CONSTANT
+  /MODEL=LINEAR
+  /PLOT FIT.
+FILTER OFF.
+
+USE ALL.
+EXECUTE .
+* Curve Estimation.
+TSET NEWVAR=NONE .
+CURVEFIT /VARIABLES=Y1  WITH X1
+  /CONSTANT
+  /MODEL=LINEAR
+  /PLOT FIT.
+
+USE ALL.
+COMPUTE filter_$=(GROUP = 1).
+VARIABLE LABEL filter_$ 'GROUP = 1 (FILTER)'.
+VALUE LABELS filter_$  0 'Not Selected' 1 'Selected'.
+FORMAT filter_$ (f1.0).
+FILTER BY filter_$.
+EXECUTE .
+* Curve Estimation.
+TSET NEWVAR=NONE .
+CURVEFIT /VARIABLES=Y2  WITH X2
+  /CONSTANT
+  /MODEL=LINEAR
+  /PLOT FIT.
+
+USE ALL.
+COMPUTE filter_$=(GROUP = 2).
+VARIABLE LABEL filter_$ 'GROUP = 2 (FILTER)'.
+VALUE LABELS filter_$  0 'Not Selected' 1 'Selected'.
+FORMAT filter_$ (f1.0).
+FILTER BY filter_$.
+EXECUTE .
+* Curve Estimation.
+TSET NEWVAR=NONE .
+CURVEFIT /VARIABLES=Y2  WITH X2
+  /CONSTANT
+  /MODEL=LINEAR
+  /PLOT FIT.
+FILTER OFF.
+
+USE ALL.
+EXECUTE .
+* Curve Estimation.
+TSET NEWVAR=NONE .
+CURVEFIT /VARIABLES=Y2  WITH X2
+  /CONSTANT
+  /MODEL=LINEAR
+  /PLOT FIT.

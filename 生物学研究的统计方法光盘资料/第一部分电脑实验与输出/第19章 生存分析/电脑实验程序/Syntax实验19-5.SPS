@@ -1,0 +1,2 @@
+KM  time  /STATUS=status(1)  /PRINT TABLE MEAN  /PLOT SURVIVAL  /SAVE SURVIVAL .
+COXREG  time  /STATUS=status(1)  /PATTERN grade(2) size(0) relapse(1)  /METHOD=ENTER grade size relapse  /PLOT SURVIVAL  /CRITERIA=PIN(.05) POUT(.10) ITERATE(20) .

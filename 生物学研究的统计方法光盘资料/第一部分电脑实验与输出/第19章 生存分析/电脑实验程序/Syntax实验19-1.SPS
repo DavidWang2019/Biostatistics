@@ -1,0 +1,7 @@
+WEIGHT
+  BY freq .
+SURVIVAL
+  TABLE=time
+  /INTERVAL=THRU 11 BY 1
+  /STATUS=status(1)
+  /PRINT=TABLE .

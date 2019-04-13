@@ -1,0 +1,6 @@
+WEIGHT
+  BY freq .
+LOGISTIC REGRESSION  effect
+  /METHOD = ENTER drug
+  /PRINT = CI(95)
+  /CRITERIA = PIN(.05) POUT(.10) ITERATE(20) CUT(.5) .
